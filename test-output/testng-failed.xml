@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" verbose="2" name="Test1 Browser Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tests.Validate">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="verifyParallel" invocation-numbers="0 1"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.tests.Validate -->
+    </classes>
+  </test> <!-- Test1 Browser Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
